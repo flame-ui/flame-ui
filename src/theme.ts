@@ -2,6 +2,6 @@ import { DefaultTheme } from 'styled-components'
 
 export type Theme = DefaultTheme
 
-export type Color = keyof DefaultTheme['colors']
+export type TextLineHeight = keyof DefaultTheme['lineHeights']
 
-export type Font = keyof DefaultTheme['fonts']
+export type TextLetterSpacing = keyof DefaultTheme['letterSpacings']

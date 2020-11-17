@@ -1208,10 +1208,10 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@flame-ui/theme@0.1.0":
-  version "0.1.0"
-  resolved "https://registry.npmjs.org/@flame-ui/theme/-/theme-0.1.0.tgz#26165883ab892da22bba182ba39dcb3dd4ffe917"
-  integrity sha512-5jFpVUvwaRAJM8hmlF0O/0Hjkjrofi0duAjFmXBxanlqUloaLSAa28t5PJk+9vheR2TI8NSl0W3USmwEzP+3Hg==
+"@flame-ui/theme@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.npmjs.org/@flame-ui/theme/-/theme-0.2.0.tgz#7e32aec71311c7dec11d652a562dfa663fabd95f"
+  integrity sha512-bbItetRQ+lDT3yIAbOK1++Fn2VPPVzVlugQ62CLXMQoibMOh+DCUbpDuIFZu9+JARKy8pv8K8sOiRCVaWGqJng==
   dependencies:
     "@mullerstd/validators" "^1.0.3"
 
