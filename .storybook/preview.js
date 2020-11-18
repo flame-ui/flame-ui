@@ -1,15 +1,15 @@
 import React from 'react'
-import { ThemeProvider } from '../src'
+import { ThemeProvider, theme } from '../src'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   layout: 'centered',
 }
 
-export const decorators = [
-  (Story) => (
-    <ThemeProvider>
-      <Story />
-    </ThemeProvider>
-  ),
-]
+const WithTheme = (Story) => (
+  <ThemeProvider theme={theme}>
+    <Story />
+  </ThemeProvider>
+)
+
+export const decorators = [WithTheme]

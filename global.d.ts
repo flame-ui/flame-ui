@@ -1,4 +1,4 @@
-import { theme } from './src/defaultTheme'
+import { theme, colorKeys } from './src/defaultTheme'
 
 type Theme = typeof theme
 
