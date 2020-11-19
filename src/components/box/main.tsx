@@ -31,7 +31,9 @@ export interface BoxProps
     LayoutProps,
     PositionProps,
     SpaceProps,
-    TextAlignProps {}
+    TextAlignProps {
+  color?: string
+}
 
 export const boxMixin = compose(
   background,

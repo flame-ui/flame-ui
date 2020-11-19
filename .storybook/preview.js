@@ -1,15 +1,24 @@
 import React from 'react'
-import { ThemeProvider, GlobalStyles } from '../src'
+import { css } from 'styled-components'
+
+import { ThemeProvider, GlobalStyles, themeGet } from '../src'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   layout: 'centered',
 }
 
+const styles = css`
+  *::selection {
+    background-color: ${themeGet('colors.primary')};
+    color: white;
+  }
+`
+
 export const decorators = [
   (Story) => (
     <ThemeProvider>
-      <GlobalStyles />
+      <GlobalStyles styles={styles} />
       <Story />
     </ThemeProvider>
   ),

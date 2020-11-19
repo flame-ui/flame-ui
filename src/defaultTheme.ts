@@ -10,5 +10,6 @@ export const {
 } = createTheme({
   colors: {
     primary: '#2672FF',
+    red: '#ff6262',
   },
 })
