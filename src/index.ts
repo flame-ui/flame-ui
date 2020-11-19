@@ -7,5 +7,8 @@ export * from './theme'
 export * from './helpers/color'
 export * from './helpers/font'
 export * from './helpers/fontSize'
+export * from './helpers/themeGet'
+
+export * from './helpers/transition'
 
 export * from './utils/thirdParty'

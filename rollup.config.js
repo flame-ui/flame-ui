@@ -26,7 +26,15 @@ const config = [
       typescript({
         tsconfig: 'tsconfig.json',
         tsconfigOverride: {
-          exclude: ['test'],
+          rootDir: 'src',
+          include: ['src/**/*.ts', 'src/**/*.tsx'],
+          exclude: [
+            'jest.setup.ts',
+            '**/*.spec.ts',
+            '**/*.spec.tsx',
+            '**/*.stories.tsx',
+            '**/example*',
+          ],
         },
       }),
     ],

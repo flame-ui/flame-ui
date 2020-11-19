@@ -23,5 +23,5 @@
     "types": ["react", "jest"]
   },
   "exclude": ["**/lib", "**/node_modules"],
-  "include": ["global.d.ts", "**/*.ts", "**/*.tsx", "**/*.spec.ts", "**/*.test.ts"]
+  "include": ["src/global.d.ts", "**/*.ts", "**/*.tsx", "**/*.spec.ts", "**/*.test.ts"]
 }
