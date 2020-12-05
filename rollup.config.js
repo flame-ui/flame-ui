@@ -21,7 +21,7 @@ const config = [
       { ...standardOpts, dir: 'lib', format: 'cjs' },
       { ...standardOpts, dir: 'lib/esm', format: 'esm' },
     ],
-    external: ['react', 'react-dom'],
+    external: ['react', 'react-dom', '@flame-ui/theme', 'styled-components', 'styled-system'],
     plugins: [
       typescript({
         tsconfig: 'tsconfig.json',
