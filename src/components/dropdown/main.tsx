@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { Box } from '../box'
 import { Column } from '../flex'
 
-import { themeGet } from '../../../utils/themeGet'
+import { themeGet } from '../../utils/themeGet'
 
 const DDWrapper = styled(Box)`
   background-color: ${themeGet('colors.background')};
