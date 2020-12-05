@@ -8,3 +8,5 @@ export * from './helpers/themeGet'
 export * from './helpers/transition'
 
 export * from './utils/thirdParty'
+
+export * from './styles'

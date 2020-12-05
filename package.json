@@ -52,9 +52,11 @@
   },
   "dependencies": {
     "@flame-ui/theme": "^0.2.0",
+    "@jesstelford/react-portal-universal": "^1.0.6",
     "polished": "^4.0.5",
     "react": "^17.0.0",
     "react-dom": "^17.0.1",
+    "react-hook-form": "^6.12.2",
     "styled-components": "^5.2.0",
     "styled-system": "^5.1.5"
   }
