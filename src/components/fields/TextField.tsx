@@ -4,9 +4,9 @@ import styled from 'styled-components'
 import { Box } from '../box'
 import { Text } from '../text'
 
-import { themeGet } from '../../../utils/themeGet'
+import { themeGet } from '../../helpers/themeGet'
 
-import { transition } from '../../../utils/transition'
+import { transition } from '../../helpers/transition'
 
 export interface TextFieldProps {
   name: string

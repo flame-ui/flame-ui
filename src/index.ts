@@ -6,6 +6,7 @@ export * from './theme'
 
 export * from './helpers/themeGet'
 export * from './helpers/transition'
+export * from './helpers/useTheme'
 
 export * from './utils/thirdParty'
 

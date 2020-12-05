@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled, { keyframes } from 'styled-components'
-import { useTheme } from '../../../utils/useTheme'
+import { useTheme } from '../../helpers/useTheme'
 
 const rotateAnimation = keyframes`
     0% {
