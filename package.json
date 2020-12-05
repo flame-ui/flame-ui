@@ -4,7 +4,7 @@
   "description": "flame-ui for react",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
-  "types": "lib/index.d.ts",
+  "typings": "lib/index.d.ts",
   "repository": "git@github.com:flame-ui/flame-ui-react.git",
   "author": "Nick <nikolaymuller@gmail.com>",
   "license": "MIT",
