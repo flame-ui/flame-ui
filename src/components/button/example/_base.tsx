@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { ButtonElement, BaseButtonProps } from '../main'
+import { ButtonElement, ButtonProps as BaseButtonProps } from '../main'
 
 const Link: React.FC<{ to: string }> = ({ children, to }) => <a href={to}>{children}</a>
 

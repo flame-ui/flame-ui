@@ -7,11 +7,12 @@ export interface ButtonProps {
   onClick?: () => void
   disabled?: boolean
   type?: string
+  role?: string
 }
 
 export const ButtonElement = styled(Box).attrs(() => ({
   as: 'button',
-}))`
+}))<ButtonProps>`
   margin: 0;
   border: none;
   background-color: transparent;
