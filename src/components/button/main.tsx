@@ -3,12 +3,15 @@ import styled from 'styled-components'
 import { Box, BoxProps } from '../box'
 import { Text } from '../text'
 
-export interface BaseButtonProps {
+export interface ButtonProps {
   onClick?: () => void
   disabled?: boolean
+  type?: string
 }
 
-export const ButtonElement = styled.button`
+export const ButtonElement = styled(Box).attrs(() => ({
+  as: 'button',
+}))`
   margin: 0;
   border: none;
   background-color: transparent;
@@ -27,6 +30,7 @@ export const ButtonContainer = styled(Box)<BoxProps>`
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 `
 
 ButtonContainer.displayName = 'ButtonContainer'
