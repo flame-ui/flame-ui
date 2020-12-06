@@ -1,6 +1,6 @@
 {
   "name": "@flame-ui/react",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "flame-ui for react",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
@@ -54,6 +54,7 @@
     "typescript": "^4.1.2"
   },
   "dependencies": {
+    "@flame-ui/hooks": "^1.0.1",
     "@flame-ui/theme": "^0.2.0",
     "@jesstelford/react-portal-universal": "^1.0.6",
     "polished": "^4.0.5",

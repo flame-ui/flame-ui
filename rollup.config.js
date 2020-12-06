@@ -27,6 +27,7 @@ const config = [
       '@flame-ui/theme',
       'styled-components',
       'styled-system',
+      'polished',
       'react-hook-form',
       '@jesstelford/react-portal-universal',
     ],

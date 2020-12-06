@@ -1,4 +1,5 @@
 export { createTheme } from '@flame-ui/theme'
+export * from '@flame-ui/hooks'
 
 export * from './components'
 

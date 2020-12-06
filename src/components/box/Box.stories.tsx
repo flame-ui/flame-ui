@@ -1,26 +1,26 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react/types-6-0'
 
-import { Box as BoxComponent, BoxProps } from './main'
+import { Box, BoxProps } from './main'
 
 import { colorKeys } from '../../defaultTheme'
 
 export default {
-  title: 'Components/Base',
+  title: 'Components/Box',
 } as Meta
 
-export const Box: Story<BoxProps> = (args) => {
-  return <BoxComponent {...args} />
+export const Default: Story<BoxProps> = (args) => {
+  return <Box {...args} />
 }
 
-Box.args = {
+Default.args = {
   width: '100px',
   height: '100px',
   borderRadius: 6,
   bg: 'primary',
 }
 
-Box.argTypes = {
+Default.argTypes = {
   width: {
     control: 'text',
   },

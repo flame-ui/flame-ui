@@ -1261,6 +1261,13 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@flame-ui/hooks@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/@flame-ui/hooks/-/hooks-1.0.1.tgz#a9f18f679acbc6cf0032d9ea19b3eb0be9ab7971"
+  integrity sha512-DFv3g0OdRh19TvIfgSaXTIxSmsWb/I7mCIaZAaHxr8UiNNsbXFd8SFrlfm9U0Sr/Bn/sNUSQ6L65wDnIwe5Wjg==
+  dependencies:
+    react "^17.0.1"
+
 "@flame-ui/theme@^0.2.0":
   version "0.2.0"
   resolved "https://registry.npmjs.org/@flame-ui/theme/-/theme-0.2.0.tgz#7e32aec71311c7dec11d652a562dfa663fabd95f"
@@ -9841,7 +9848,7 @@ react-textarea-autosize@^8.1.1:
     use-composed-ref "^1.0.0"
     use-latest "^1.0.0"
 
-react@^17.0.0:
+react@^17.0.0, react@^17.0.1:
   version "17.0.1"
   resolved "https://registry.npmjs.org/react/-/react-17.0.1.tgz#6e0600416bd57574e3f86d92edba3d9008726127"
   integrity sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w==

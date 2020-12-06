@@ -51,11 +51,22 @@ export const Portal: React.FC<{ selector?: string; clickOutside?: () => void }> 
       clickOutside?.()
     }
   }
+
   React.useEffect(() => {
+    const portalContainer = document.getElementById('portal-container')
+    const portal = document.createElement('div')
+    portal.id = selector
+
+    portalContainer?.appendChild(portal)
+
     window.addEventListener('click', clickOutsideHandler)
-    return () => window.removeEventListener('click', clickOutsideHandler)
+    return () => {
+      portal.remove()
+      window.removeEventListener('click', clickOutsideHandler)
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
   return (
     <UniversalPortal selector={selector}>
       <div ref={ref}>{children}</div>
