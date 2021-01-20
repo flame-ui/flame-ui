@@ -4,11 +4,10 @@ import { Box, BoxProps } from '../box'
 export const Flex: React.FC<BoxProps> = ({
   children,
   flexDirection,
-  flexWrap = 'wrap',
   ...props
 }) => {
   return (
-    <Box flexDirection={flexDirection} flexWrap={flexWrap} {...props}>
+    <Box flexDirection={flexDirection} {...props}>
       {children}
     </Box>
   )
