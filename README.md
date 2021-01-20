@@ -59,15 +59,12 @@ const App = ({ children }) => {
 - Image
 - ButtonElement
 
-### Flexbox
+### Layout
 
 - Row
 - Column
-- List
-
-### Grid
-
 - Grid
+- List
 
 ### HOC
 
