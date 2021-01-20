@@ -30,8 +30,12 @@ export const ListContainer: React.FC<ListProps> = ({
 
 ListContainer.displayName = 'ListContainer'
 
-export const ListItem: React.FC = ({ children }) => {
-  return <Box as="li">{children}</Box>
+export const ListItem: React.FC<BoxProps> = ({ children, ...props }) => {
+  return (
+    <Box as="li" {...props}>
+      {children}
+    </Box>
+  )
 }
 
 ListItem.displayName = 'ListItem'
