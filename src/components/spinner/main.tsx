@@ -1,32 +1,33 @@
 import * as React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { useTheme } from '../../helpers/useTheme'
+import { SVG } from '../SVG'
 
 const rotateAnimation = keyframes`
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 `
 
 const dashAnimation = keyframes`
-    0% {
-        stroke-dasharray: 20px, 230px;
-        stroke-dashoffset: 0px;
-    }
-    50% {
-        stroke-dasharray: 150px, 100px;
-        stroke-dashoffset: -75px;
-    }
-    100% {
-        stroke-dasharray: 20px, 230px;
-        stroke-dashoffset: -250px;
-    }
+  0% {
+    stroke-dasharray: 20px, 230px;
+    stroke-dashoffset: 0px;
+  }
+  50% {
+    stroke-dasharray: 150px, 100px;
+    stroke-dashoffset: -75px;
+  }
+  100% {
+    stroke-dasharray: 20px, 230px;
+    stroke-dashoffset: -250px;
+  }
 `
 
-const Wrapper = styled.svg`
+const Wrapper = styled.div`
   transform-origin: center;
   animation: 1.8s linear infinite;
   animation-name: ${rotateAnimation};
@@ -34,7 +35,7 @@ const Wrapper = styled.svg`
 
 const Circle = styled.circle`
   fill: none;
-  stroke-width: 5;
+  stroke-width: 8;
   stroke-linecap: round;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
@@ -44,24 +45,38 @@ const Circle = styled.circle`
   }
 `
 
-const spinnerSizes = {
-  small: 32,
-  medium: 56,
+export interface SpinnerProps {
+  size?: string
+  fgColor?: string
+  bgColor?: string
+  strokeWidth?: number
 }
 
-type SpinnerSize = keyof typeof spinnerSizes
-
-interface SpinnerProps {
-  size: SpinnerSize
-}
-
-export const Spinner = ({ size = 'medium' }: SpinnerProps): React.ReactElement => {
+export const Spinner = ({
+  size = '56px',
+  fgColor = 'primary',
+  bgColor = 'backgrounds.1',
+  strokeWidth = 6,
+}: SpinnerProps): React.ReactElement => {
   const { themeGet } = useTheme()
-  const spinnerSize = spinnerSizes[size]
   return (
-    <Wrapper width={spinnerSize} height={spinnerSize} viewBox="0 0 100 100">
-      <Circle cx={50} cy={50} r={40} stroke={themeGet('colors.backgrounds.1')} />
-      <Circle cx={50} cy={50} r={40} stroke={themeGet('colors.primary')} />
+    <Wrapper>
+      <SVG width={size} height={size} viewBox="0 0 100 100">
+        <Circle
+          cx={50}
+          cy={50}
+          r={40}
+          strokeWidth={strokeWidth}
+          stroke={themeGet(`colors.${bgColor}`)}
+        />
+        <Circle
+          cx={50}
+          cy={50}
+          r={40}
+          strokeWidth={strokeWidth}
+          stroke={themeGet(`colors.${fgColor}`)}
+        />
+      </SVG>
     </Wrapper>
   )
 }

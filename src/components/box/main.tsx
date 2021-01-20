@@ -19,21 +19,46 @@ import {
   SpaceProps,
   textAlign,
   TextAlignProps,
+  system,
 } from 'styled-system'
 
 import { splitProps } from '../../utils/splitProps'
+
+interface FlexGapProps {
+  gap?: number | string
+  rowGap?: number | string
+  columnGap?: number | string
+}
 
 export interface BoxProps
   extends BackgroundProps,
     BorderProps,
     Omit<ColorProps, 'color'>,
     FlexboxProps,
+    FlexGapProps,
     LayoutProps,
     PositionProps,
     SpaceProps,
     TextAlignProps {
   color?: string
 }
+
+const flexGap = system({
+  gap: {
+    property: 'gap',
+    scale: 'space',
+  },
+  rowGap: {
+    // @ts-ignore
+    property: 'row-gap',
+    scale: 'space',
+  },
+  columnGap: {
+    // @ts-ignore
+    property: 'column-gap',
+    scale: 'space',
+  },
+})
 
 export const boxMixin = compose(
   background,
@@ -44,6 +69,7 @@ export const boxMixin = compose(
   position,
   space,
   textAlign,
+  flexGap,
 )
 
 const splitBoxProps = splitProps<BoxProps>(boxMixin)

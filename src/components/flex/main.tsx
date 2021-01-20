@@ -1,26 +1,15 @@
 import * as React from 'react'
 import { Box, BoxProps } from '../box'
 
-export interface FlexProps extends BoxProps {
-  gap?: number | number[]
-}
-
-export const Flex: React.FC<FlexProps> = ({ children, gap, flexDirection, ...props }) => {
-  const isRow = flexDirection === 'row'
+export const Flex: React.FC<BoxProps> = ({
+  children,
+  flexDirection,
+  flexWrap = 'wrap',
+  ...props
+}) => {
   return (
-    <Box flexDirection={flexDirection} {...props}>
-      {React.Children.map(children, (child: React.ReactNode, index) => {
-        if (gap) {
-          return (
-            <React.Fragment>
-              {index !== 0 && (isRow ? <Box ml={gap} /> : <Box mb={gap} />)}
-              {child}
-            </React.Fragment>
-          )
-        } else {
-          return child
-        }
-      })}
+    <Box flexDirection={flexDirection} flexWrap={flexWrap} {...props}>
+      {children}
     </Box>
   )
 }
@@ -32,7 +21,7 @@ Flex.defaultProps = {
 
 Flex.displayName = 'Flex'
 
-export const Row: React.FC<Omit<FlexProps, 'flexDirection'>> = ({ children, ...props }) => {
+export const Row: React.FC<Omit<BoxProps, 'flexDirection'>> = ({ children, ...props }) => {
   return (
     <Flex flexDirection="row" {...props}>
       {children}
@@ -42,7 +31,7 @@ export const Row: React.FC<Omit<FlexProps, 'flexDirection'>> = ({ children, ...p
 
 Flex.displayName = 'Row'
 
-export const Column: React.FC<Omit<FlexProps, 'flexDirection'>> = ({ children, ...props }) => {
+export const Column: React.FC<Omit<BoxProps, 'flexDirection'>> = ({ children, ...props }) => {
   return (
     <Flex flexDirection="column" {...props}>
       {children}

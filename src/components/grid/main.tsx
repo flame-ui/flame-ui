@@ -7,10 +7,6 @@ import { grid, GridProps } from 'styled-system'
 
 import { splitProps } from '../../utils/splitProps'
 
-// export const boxMixin = compose(
-//   grid,
-// )
-
 const splitBoxProps = splitProps<GridProps>(grid)
 
 const Base: React.FC = (props) => <Box {...splitBoxProps(props)[1]} />

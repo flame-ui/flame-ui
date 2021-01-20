@@ -1,9 +1,18 @@
 import React from 'react'
-import { useMedia } from '@flame-ui/hooks'
+import { useTheme } from '../../helpers/useTheme'
 
-export const Media: React.FC<{ q: string }> = ({ q, children }) => {
-  const isMath = useMedia([q], [true], false)
-  if (isMath) {
+import { useMediaQueries } from '@flame-ui/hooks'
+
+interface MediaProps {
+  q: number | string
+}
+
+export const Media: React.FC<MediaProps> = ({ q, children }) => {
+  const { theme } = useTheme()
+  const query = typeof q === 'number' ? `(max-width: ${(theme as any).breakpoints[q]})` : q
+  const isMatch = useMediaQueries([query], [true], false)
+
+  if (isMatch) {
     return <div>{children}</div>
   } else {
     return null

@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react/types-6-0'
 
 import { textTags } from './main'
 
-import { Text, TextProps, VariantKeys } from './example'
+import { Text, TextProps } from './main'
 
 import {
   colorKeys,
@@ -60,24 +60,6 @@ Base.argTypes = {
       options: textTags,
     },
   },
-  children: {
-    description: 'Children',
-    defaultValue: 'Hello',
-    control: 'text',
-  },
-}
-
-export const WithVariant: Story<TextProps & { children: string }> = (args) => {
-  return <Text {...args} />
-}
-
-WithVariant.argTypes = {
-  variant: {
-    description: 'Key of variants scale',
-    defaultValue: 'body',
-    control: { type: 'select', options: VariantKeys },
-  },
-  tag: Base.argTypes.tag,
   children: {
     description: 'Children',
     defaultValue: 'Hello',

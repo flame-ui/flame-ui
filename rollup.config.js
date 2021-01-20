@@ -25,6 +25,7 @@ const config = [
       'react',
       'react-dom',
       '@flame-ui/theme',
+      '@flame-ui/hooks',
       'styled-components',
       'styled-system',
       'polished',
