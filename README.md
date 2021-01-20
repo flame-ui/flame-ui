@@ -77,3 +77,8 @@ const App = ({ children }) => {
 - Spinner
 - Media
 - NoSSR
+
+## Utils
+
+- createTheme
+- useTheme
