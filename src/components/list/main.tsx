@@ -1,7 +1,7 @@
 import React from 'react'
-import { Box } from '../box'
+import { Box, BoxProps } from '../box'
 
-export interface ListProps {
+export interface ListProps extends BoxProps {
   direction?: 'row' | 'column'
 }
 
