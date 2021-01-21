@@ -23,6 +23,6 @@ jobs:
       - name: Build
         run: yarn build
       - name: Publish package
-        run: yarn run semantic-release
+        run: npx semantic-release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
