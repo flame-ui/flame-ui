@@ -1,3 +1,10 @@
+## [0.4.1](https://github.com/flame-ui/flame-ui-react/compare/v0.4.0...v0.4.1) (2021-01-21)
+
+
+### Bug Fixes
+
+* **button:** remove default paddings ([960ae9d](https://github.com/flame-ui/flame-ui-react/commit/960ae9d6ddf4f24627299121246bf325d74e4bf9))
+
 # [0.4.0](https://github.com/flame-ui/flame-ui-react/compare/v0.3.2...v0.4.0) (2021-01-21)
 
 
