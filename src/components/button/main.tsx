@@ -14,6 +14,7 @@ export const ButtonElement = styled(Box).attrs(() => ({
   as: 'button',
 }))<ButtonProps>`
   margin: 0;
+  padding: 0;
   border: none;
   background-color: transparent;
   user-select: none;
