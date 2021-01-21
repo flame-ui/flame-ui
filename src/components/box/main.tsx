@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import css from '../../utils/css'
+import { css } from '../../utils/css'
 
 import { SystemStyleObject } from 'styled-system__css'
 

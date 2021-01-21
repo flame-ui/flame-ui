@@ -10,5 +10,6 @@ export * from './helpers/transition'
 export * from './helpers/useTheme'
 
 export * from './utils/thirdParty'
+export { css } from './utils/css'
 
 export * from './styles'

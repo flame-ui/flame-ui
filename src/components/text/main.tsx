@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-import { color, ColorProps, compose, style, typography, TypographyProps } from 'styled-system'
+import { color, ColorProps, compose, typography, TypographyProps } from 'styled-system'
 
 import { splitProps } from '../../utils/splitProps'
 
@@ -17,12 +17,6 @@ export const textTags = ['span', 'p', 'h6', 'h5', 'h4', 'h3', 'h2', 'h1'] as con
 type TextTag = typeof textTags
 
 export type TextProps = BaseTextProps & BoxProps & { tag?: TextTag; overflowEllipsis?: boolean }
-
-// const textColor = style({
-//   prop: 'textColor',
-//   cssProperty: 'color',
-//   key: 'colors',
-// })
 
 export const textMixin = compose(typography, color)
 
