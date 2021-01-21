@@ -1,6 +1,5 @@
 {
-  "branches": ["main", "next"],
-  "repositoryUrl": "https://github.com/abdelrahmanahmed/semantic-release-example",
+  "branches": "main",
   "debug": "true",
   "plugins": [
     "@semantic-release/commit-analyzer",
