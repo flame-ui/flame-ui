@@ -14,8 +14,6 @@ export const splitProps = <T>(propNames: string[]) => {
     const rightProps = {} as Omit<U, keyof T>
 
     for (const key of Object.keys(props)) {
-      // @ts-ignore
-      console.log(key, re.test(key))
       if (re.test(key)) {
         // @ts-ignore
         leftProps[key] = props[key]

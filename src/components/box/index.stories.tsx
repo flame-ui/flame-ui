@@ -17,7 +17,7 @@ Default.args = {
   width: '100px',
   height: '100px',
   borderRadius: 6,
-  bg: 'primary',
+  bg: 'lighten(0.04, primary)',
   tProperty: 'background-color, transform',
   tDuration: '0.2s',
   tFunction: 'ease-in-out',
@@ -28,7 +28,7 @@ Default.args = {
     },
   },
   hover: {
-    bg: 'red',
+    bg: 'lighten(0.4, primary)',
     transform: 'scale(1.2)',
   },
   active: {

@@ -1,13 +1,16 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import css from '@styled-system/css'
+import css from '../../utils/css'
+
+import { SystemStyleObject } from 'styled-system__css'
+
+import colorTransform from '../../utils/transformColor'
 
 import {
   background,
   BackgroundProps,
   border,
   BorderProps,
-  color,
   ColorProps,
   compose,
   flexbox,
@@ -42,6 +45,7 @@ interface BaseBoxProps
     SpaceProps,
     TextAlignProps {
   color?: string
+  bg?: string
   transform?: string
   transition?: string
   tProperty?: string
@@ -95,6 +99,29 @@ const transition = system({
   },
 })
 
+const color = system({
+  color: {
+    property: 'color',
+    scale: 'colors',
+    transform: colorTransform,
+  },
+  bg: {
+    property: 'background',
+    scale: 'colors',
+    transform: colorTransform,
+  },
+  fill: {
+    property: 'fill',
+    scale: 'colors',
+    transform: colorTransform,
+  },
+  stroke: {
+    property: 'stroke',
+    scale: 'colors',
+    transform: colorTransform,
+  },
+})
+
 export const boxMixin = compose(
   background,
   border,
@@ -119,9 +146,9 @@ const splitBoxProps = splitProps<BoxProps>([
 
 const pseudoMixin = ({ hover, focus, active }: BoxProps): ReturnType<typeof css> =>
   css({
-    '&:hover': css(hover as unknown),
-    '&:focus': css(focus as unknown),
-    '&:active': css(active as unknown),
+    '&:hover': css(hover as SystemStyleObject),
+    '&:focus': css(focus as SystemStyleObject),
+    '&:active': css(active as SystemStyleObject),
   })
 
 const mediaMixin = ({ media }: BoxProps): ReturnType<typeof css> => {
