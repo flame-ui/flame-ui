@@ -48,7 +48,7 @@ const App = ({ children }) => {
 
 ## Components
 
-[Storybook](https://5fb2ee73cc0d4700216e9e2f-qidhfeihdr.chromatic.com/?path=/story/components-box--default)
+[Storybook](https://main--5fb2ee73cc0d4700216e9e2f.chromatic.com)
 
 ### Base
 
