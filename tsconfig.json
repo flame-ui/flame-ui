@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "./lib",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "module": "es6",
+    "lib": ["es2017", "dom"],
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "outDir": "./lib",
+    "target": "es5",
+    "typeRoots": ["node_modules/@types"],
+    "types": ["react", "jest"]
+  },
+  "exclude": ["**/lib", "**/node_modules"],
+  "include": ["src/global.d.ts", "**/*.ts", "**/*.tsx", "**/*.spec.ts", "**/*.test.ts"]
+}
