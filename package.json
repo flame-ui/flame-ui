@@ -11,22 +11,6 @@
   "files": [
     "lib"
   ],
-  "release": {
-    "branches": [
-      "main",
-      "next"
-    ],
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      [
-        "@semantic-release/npm",
-        {
-          "npmPublish": false,
-          "tarballDir": "dist"
-        }
-      ]
-    ]
-  },
   "scripts": {
     "build": "yarn clean && rollup -c",
     "clean": "rimraf lib",
@@ -46,6 +30,8 @@
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@mullerstd/eslint-config": "^1.3.0",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
     "@storybook/addon-actions": "^6.1.14",
     "@storybook/addon-essentials": "^6.1.14",
     "@storybook/addon-links": "^6.1.14",
