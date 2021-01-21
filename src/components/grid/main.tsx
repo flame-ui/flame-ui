@@ -7,7 +7,7 @@ import { grid, GridProps } from 'styled-system'
 
 import { splitProps } from '../../utils/splitProps'
 
-const splitBoxProps = splitProps<GridProps>(grid)
+const splitBoxProps = splitProps<GridProps>(grid.propNames)
 
 const Base: React.FC = (props) => <Box {...splitBoxProps(props)[1]} />
 

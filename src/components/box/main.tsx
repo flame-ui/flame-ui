@@ -109,7 +109,13 @@ export const boxMixin = compose(
   transition,
 )
 
-const splitBoxProps = splitProps<BoxProps>(boxMixin)
+const splitBoxProps = splitProps<BoxProps>([
+  ...boxMixin.propNames,
+  'hover',
+  'focus',
+  'active',
+  'media',
+])
 
 const pseudoMixin = ({ hover, focus, active }: BoxProps): ReturnType<typeof css> =>
   css({

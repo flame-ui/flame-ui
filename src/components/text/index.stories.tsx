@@ -47,7 +47,7 @@ Base.argTypes = {
     defaultValue: 'tight',
     control: { type: 'select', options: letterSpacings },
   },
-  textColor: {
+  color: {
     description: 'Color key of theme object',
     defaultValue: 'font',
     control: { type: 'select', options: colorKeys },

@@ -18,15 +18,15 @@ type TextTag = typeof textTags
 
 export type TextProps = BaseTextProps & BoxProps & { tag?: TextTag; overflowEllipsis?: boolean }
 
-const textColor = style({
-  prop: 'textColor',
-  cssProperty: 'color',
-  key: 'colors',
-})
+// const textColor = style({
+//   prop: 'textColor',
+//   cssProperty: 'color',
+//   key: 'colors',
+// })
 
-export const textMixin = compose(typography, color, textColor)
+export const textMixin = compose(typography, color)
 
-const splitTextProps = splitProps<BoxProps>(textMixin)
+const splitTextProps = splitProps<BoxProps>(textMixin.propNames)
 
 const Base: React.FC<TextProps> = ({ tag = 'span', ...props }) => (
   <Box as={tag as never} {...splitTextProps(props)[1]}>
