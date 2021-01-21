@@ -1,11 +1,7 @@
 import * as React from 'react'
 import { Box, BoxProps } from '../box'
 
-export const Flex: React.FC<BoxProps> = ({
-  children,
-  flexDirection,
-  ...props
-}) => {
+export const Flex: React.FC<BoxProps> = ({ children, flexDirection, ...props }) => {
   return (
     <Box flexDirection={flexDirection} {...props}>
       {children}

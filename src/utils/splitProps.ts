@@ -7,7 +7,7 @@ import { styleFn } from 'styled-system'
  */
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const splitProps = <T>(mixin: styleFn) => {
-  const re = new RegExp(`^(${mixin.propNames.join('|')})$`)
+  const re = new RegExp(`^(${mixin.propNames.join('|')}|hover|focus|active)$`)
 
   return <U>(props: U): [T, Omit<U, keyof T>] => {
     const leftProps = {} as T

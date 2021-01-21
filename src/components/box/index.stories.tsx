@@ -18,6 +18,23 @@ Default.args = {
   height: '100px',
   borderRadius: 6,
   bg: 'primary',
+  tProperty: 'background-color, transform',
+  tDuration: '0.2s',
+  tFunction: 'ease-in-out',
+  media: {
+    'min-width: 1024px': {
+      width: '140px',
+      height: '140px',
+    },
+  },
+  hover: {
+    bg: 'red',
+    transform: 'scale(1.2)',
+  },
+  active: {
+    bg: 'red',
+    transform: 'scale(0.9)',
+  },
 }
 
 Default.argTypes = {
