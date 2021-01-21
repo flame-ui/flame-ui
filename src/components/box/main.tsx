@@ -119,13 +119,15 @@ const pseudoMixin = ({ hover, focus, active }: BoxProps): ReturnType<typeof css>
   })
 
 const mediaMixin = ({ media }: BoxProps): ReturnType<typeof css> => {
-  const queries: { [key: string]: BoxProps } = {}
-  Object.keys(media).forEach((q) => {
-    const query = `@media(${q})`
-    queries[query] = media[q]
-  })
+  if (media) {
+    const queries: { [key: string]: BoxProps } = {}
+    Object.keys(media).forEach((q) => {
+      const query = `@media(${q})`
+      queries[query] = media[q]
+    })
 
-  return css(queries)
+    return css(queries)
+  }
 }
 
 const Div: React.FC = (props) => <div {...splitBoxProps(props)[1]} />
